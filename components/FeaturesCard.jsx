@@ -30,7 +30,7 @@ const FeaturesCard = () => {
           <div className="gap-2 flex items-center justify-between">
             <div>
               <Image
-                src="/stars.png"
+                src="/star.png"
                 alt="feature icons"
                 height={60}
                 width={60}

@@ -28,10 +28,7 @@ const Explore = () => {
           textStyles="text-center"
         />
         <div className="mt-[50px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-center min-h-[70vh] gap-5">
-        
           <FeaturesCard/>
-         
-          
         </div>
        
       </motion.div>
