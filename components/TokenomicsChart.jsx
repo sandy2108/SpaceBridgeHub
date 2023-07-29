@@ -6,15 +6,15 @@ const TokenomicsChart = () => {
 
   useEffect(() => {
     const data = {
-      labels: ['Liquidity', 'Staking rewards', 'Marketing', 'Cex Listing'],
+      labels: ['Liquidity', 'Staking rewards', 'Cex Listing'],
       datasets: [{
         label: 'My First Dataset',
-        data: [60, 20, 10, 10],
+        data: [80, 15, 5],
         backgroundColor: [
           '#800080', // White
-          '#b46eb4', // Purple (Use the same shade you are using in your site)
+          'yellow', // Purple (Use the same shade you are using in your site)
           'gray', // Light Purple (A lighter shade of purple)
-          'white',
+          
         ],
         hoverOffset: 4,
       }],

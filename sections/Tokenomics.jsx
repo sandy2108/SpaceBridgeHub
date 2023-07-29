@@ -6,7 +6,6 @@ import styles from '../styles';
 import { Tokeninfo } from '../constants';
 import { NewFeatures, TitleText, TypingText } from '../components';
 import { planetVariants, staggerContainer, fadeIn } from '../utils/motion';
-import { Chart } from 'chart.js';
 import TokenomicsChart from '../components/TokenomicsChart';
 
 const Tokenomics = () => (
