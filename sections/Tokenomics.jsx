@@ -9,7 +9,7 @@ import { planetVariants, staggerContainer, fadeIn } from '../utils/motion';
 import TokenomicsChart from '../components/TokenomicsChart';
 
 const Tokenomics = () => (
-  <section className={`${styles.paddings} bg-black blackbg relative z-10`}>
+  <section className={`${styles.paddings} bg-black min-h-screen blackbg relative z-10`}>
     <motion.div
       variants={staggerContainer}
       initial="hidden"
@@ -32,7 +32,7 @@ const Tokenomics = () => (
 
       <motion.div
         variants={planetVariants('right')}
-        className={`flex-1 ${styles.flexCenter}`}
+        className={`flex-1 ${styles.flexCenter} max-h-[600px]`}
       >
         <TokenomicsChart/>
       </motion.div>

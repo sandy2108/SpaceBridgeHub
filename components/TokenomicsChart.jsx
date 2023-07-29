@@ -19,10 +19,41 @@ const TokenomicsChart = () => {
         hoverOffset: 4,
       }],
     };
+    const image = new Image();
+    image.src = 'https://firebasestorage.googleapis.com/v0/b/spac-9eba0.appspot.com/o/logo.png?alt=media&token=25e4faae-ce01-47a1-86fb-3ea34596836f';
+
+    const plugin = {
+      id: 'customCanvasBackgroundImage',
+      beforeDraw: (chart) => {
+        if (image.complete) {
+          const ctx = chart.ctx;
+          const {top, left, width, height} = chart.chartArea;
+          const x = left + width / 2 - image.width / 2;
+          const y = top + height / 2 - image.height / 2;
+          ctx.drawImage(image, x, y);
+        } else {
+          image.onload = () => chart.draw();
+        }
+      }
+    };
+
 
     const config = {
       type: 'doughnut',
       data: data,
+      plugins: [plugin],
+      options: {
+        plugins: {
+            legend: {
+                labels: {
+                    // This more specific font property overrides the global property
+                    font: {
+                        size: 20
+                    }
+                }
+            }
+        }
+      }
     };
 
     // Check if the chartRef already has a Chart instance, and destroy it if it does

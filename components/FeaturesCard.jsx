@@ -21,7 +21,7 @@ const FeaturesCard = () => {
       {spaceBridgeBotFeatures.map((feature, index) => (
         <div
           key={index}
-          className={`w-[330px] h-[300px] my-5 bg-gray-700 rounded-2xl p-4  items-center justify-between ${
+          className={`w-auto h-[300px] sm:h-[380px] md:h-[400px] lg:h-[300px] my-5 bg-gray-700 rounded-2xl p-4  items-center justify-between ${
             hoveredIndex === index ? "border-2 border-blue-400" : ""
           }`}
           onMouseEnter={() => handleMouseEnter(index)}
@@ -45,7 +45,7 @@ const FeaturesCard = () => {
             </div>
           </div>
           <div className="mt-5 ">
-            <div className="min-h-[80px] text-[18px] text-secondary-white">{feature.description}</div>
+            <div className=" mx-auto text-[18px] text-secondary-white">{feature.description}</div>
             {hoveredIndex === index && (
               <div>
                 <Link href={feature.destiny} className="my-2 flex">
